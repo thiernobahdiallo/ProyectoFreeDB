@@ -16,8 +16,8 @@ import com.example.vertice.R;
 public class SeleccionarAlumno extends AppCompatActivity implements View.OnClickListener
 {
     private StudyWorldBBDD db;
-    private EditText editId;
-    private TextView name, email;
+    private EditText editAlumnoID;
+    private TextView nombreAlumno, nombreAlumnho, edadAlumno, edadAlumnho, emailAlumno, emailAlumnho, cursoAlumno, cursoAlumnho;
     private Button selectButton, backButton;
 
     @Override
@@ -26,13 +26,22 @@ public class SeleccionarAlumno extends AppCompatActivity implements View.OnClick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seleccionar_alumno);
 
-        selectButton = findViewById(R.id.selectButtoncito);
-        backButton = findViewById(R.id.backButton);
+        selectButton = findViewById(R.id.selectAsignaturaButtoncito);
+        backButton = findViewById(R.id.backAsignaturaButton);
 
-        editId = findViewById(R.id.editId);
+        editAlumnoID = findViewById(R.id.editAsignaturaID);
 
-        name = findViewById(R.id.textViewName);
-        email = findViewById(R.id.textViewEmail);
+        nombreAlumno = findViewById(R.id.tvSelectNombreAsignatura);
+        nombreAlumnho = findViewById(R.id.tvNombreAlumnho);
+
+        edadAlumno = findViewById(R.id.tvEdadAlumno);
+        edadAlumnho = findViewById(R.id.tvEdadAlumnho);
+
+        emailAlumno = findViewById(R.id.tvEmailAlumno);
+        emailAlumnho = findViewById(R.id.tvEmailAlumnho);
+
+        cursoAlumno = findViewById(R.id.tvCursoAlumno);
+        cursoAlumnho = findViewById(R.id.tvCursoAlumnho);
 
         selectButton.setOnClickListener(this);
         backButton.setOnClickListener(this);
@@ -46,12 +55,14 @@ public class SeleccionarAlumno extends AppCompatActivity implements View.OnClick
             Cursor c;
             db = new StudyWorldBBDD(this.getApplicationContext());
             db.obre();
-            long id = Long.parseLong(editId.getText().toString());
+            long id = Long.parseLong(editAlumnoID.getText().toString());
             c = db.obtenerAlumno(id);
             if(c.getCount() != 0)
             {
-                name.setText(c.getString(1));
-                email.setText(c.getString(2));
+                nombreAlumnho.setText(c.getString(1));
+                edadAlumnho.setText(c.getString(2));
+                emailAlumnho.setText(c.getString(3));
+                cursoAlumnho.setText(c.getString(4));
                 Toast.makeText(this, "Element con id: " + c.getString(0) + " consultado correctamente.",Toast.LENGTH_SHORT).show();
             }
             else

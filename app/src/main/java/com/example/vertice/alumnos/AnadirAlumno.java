@@ -15,7 +15,7 @@ import com.example.vertice.R;
 public class AnadirAlumno extends AppCompatActivity
 {
     private StudyWorldBBDD db;
-    private EditText editName, editEdad,editEmail,editCurso;
+    private EditText editName, editEdad, editEmail, editCurso;
     private Button addButton;
 
     @Override
@@ -24,11 +24,11 @@ public class AnadirAlumno extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_anadir_alumno);
 
-        editName = findViewById(R.id.editNombreAsignatura);
-        editEdad = findViewById(R.id.editEdad);
-        editEmail = findViewById(R.id.editEmail);
-        editCurso= findViewById(R.id.editCurso);
-        editName = findViewById(R.id.editNombreAsignatura);
+        editName = findViewById(R.id.editCalificarIDAsignatura);
+        editEdad = findViewById(R.id.editNota);
+        editEmail = findViewById(R.id.editRefreshEmailAlumno);
+        editCurso= findViewById(R.id.editRefreshCursoAlumno);
+        editName = findViewById(R.id.editCalificarIDAsignatura);
 
         addButton = findViewById(R.id.addNuevaAsignatura);
         addButton.setOnClickListener(new View.OnClickListener()

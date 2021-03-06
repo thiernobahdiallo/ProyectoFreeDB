@@ -5,87 +5,110 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".alumnos.AnadirAlumno">
+
     <TextView
-        android:id="@+id/nombreAsignaturaLabel"
-        android:layout_centerHorizontal="true"
+        android:id="@+id/tvNombreAsign"
         android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
         android:textSize="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nombre:" />
+
     <EditText
-        android:id="@+id/editNombreAsignatura"
-        android:layout_below="@id/nombreAsignaturaLabel"
+        android:id="@+id/editCalificarIDAsignatura"
+        android:layout_toRightOf="@id/tvNombreAsign"
         android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/colorbotonesalumnos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="" />
+
     <TextView
-        android:id="@+id/edadLabel"
-        android:layout_below="@id/editNombreAsignatura"
+        android:id="@+id/tvEdadAlumno"
+        android:layout_below="@id/editCalificarIDAsignatura"
         android:layout_marginTop="40dp"
-        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="20dp"
         android:text="Edad" />
 
     <EditText
-        android:id="@+id/editEdad"
-        android:layout_below="@id/edadLabel"
+        android:id="@+id/editNota"
+        android:layout_below="@id/tvNombreAsign"
+        android:background="@drawable/colorbotonesalumnos"
+        android:layout_toRightOf="@id/tvEdadAlumno"
+        android:layout_marginLeft="50dp"
+        android:gravity="center"
         android:layout_marginTop="40dp"
-        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="" />
+
     <TextView
-        android:id="@+id/emailLabel"
-        android:layout_below="@id/editEdad"
+        android:id="@+id/tvEmailAlumno"
+        android:layout_below="@id/editNota"
+        android:textSize="20dp"
+        android:layout_marginLeft="50dp"
         android:layout_marginTop="40dp"
-        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Email" />
 
     <EditText
-        android:id="@+id/editEmail"
-        android:layout_below="@id/emailLabel"
+        android:id="@+id/editRefreshEmailAlumno"
+        android:layout_below="@id/tvEdadAlumno"
+        android:layout_toRightOf="@id/tvEmailAlumno"
         android:layout_marginTop="40dp"
+        android:layout_marginLeft="50dp"
+        android:gravity="center"
+        android:background="@drawable/colorbotonesalumnos"
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="" />
+
     <TextView
-        android:id="@+id/cursoLabel"
-        android:layout_below="@id/editEmail"
+        android:id="@+id/tvCursoAlumno"
+        android:layout_below="@id/editRefreshEmailAlumno"
         android:layout_marginTop="40dp"
-        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="20dp"
         android:text="Curso" />
 
     <EditText
-        android:id="@+id/editCurso"
-        android:layout_below="@id/cursoLabel"
+        android:id="@+id/editRefreshCursoAlumno"
+        android:layout_below="@id/tvEmailAlumno"
         android:layout_marginTop="40dp"
-        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@id/tvCursoAlumno"
+        android:background="@drawable/colorbotonesalumnos"
+        android:layout_marginLeft="50dp"
+        android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="" />
+
     <Button
         android:id="@+id/addNuevaAsignatura"
-        android:layout_below="@id/editCurso"
+        android:layout_below="@id/editRefreshCursoAlumno"
         android:layout_marginTop="50dp"
+        android:background="@drawable/colorbotonesalumnos"
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add" />
+
 </RelativeLayout>

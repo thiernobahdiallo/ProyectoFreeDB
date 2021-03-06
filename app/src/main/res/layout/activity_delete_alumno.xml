@@ -8,20 +8,36 @@
 
     <EditText
         android:id="@+id/editTextIDdelete"
-        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
         android:layout_marginTop="100dp"
+        android:background="@drawable/colorbotonesalumnos"
+        android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="ID" />
+        android:inputType="number"
+        android:text="" />
 
     <Button
         android:id="@+id/deleteButtoncito"
         android:layout_width="wrap_content"
-        android:layout_below="@id/editTextIDdelete"
-        android:layout_marginTop="100dp"
-        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tvAlumnoABorrar"
+        android:layout_toRightOf="@id/editTextIDdelete"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/colorbotonesalumnos"
         android:layout_height="wrap_content"
         android:text="Delete" />
+
+    <TextView
+        android:id="@+id/tvAlumnoABorrar"
+        android:layout_width="350dp"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/colorbotonesalumnos"
+        android:textStyle="bold"
+        android:text="¿Cuál es el ID del alumno a borrar?" />
 </RelativeLayout>

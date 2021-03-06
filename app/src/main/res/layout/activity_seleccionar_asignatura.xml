@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".alumnos.SeleccionarAlumno">
+
+    <EditText
+        android:id="@+id/editAsignaturaID"
+        android:layout_width="wrap_content"
+        android:background="@drawable/coloresbotonesasignaturas"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="" />
+
+    <Button
+        android:id="@+id/selectAsignaturaButtoncito"
+        android:layout_toRightOf="@id/editAsignaturaID"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/coloresbotonesasignaturas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select" />
+
+    <Button
+        android:id="@+id/backAsignaturaButton"
+        android:background="@drawable/coloresbotonesasignaturas"
+        android:layout_below="@id/selectAsignaturaButtoncito"
+        android:layout_toRightOf="@id/editAsignaturaID"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back" />
+
+    <TextView
+        android:id="@+id/tvSelectNombreAsignatura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selectAsignaturaButtoncito"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="120dp"
+        android:fontFamily="monospace"
+        android:textSize="16dp"
+        android:text="Nombre Asignatura: " />
+
+    <TextView
+        android:id="@+id/tvSelectHorasAsignatura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSelectNombreAsignatura"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="monospace"
+        android:textSize="16dp"
+        android:text="Horas: " />
+
+    <TextView
+        android:id="@+id/tvSelectNombreAsignaturha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/backAsignaturaButton"
+        android:layout_toRightOf="@id/tvSelectNombreAsignatura"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="monospace"
+        android:textSize="16dp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/tvSelectHorasAsignaturha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSelectNombreAsignatura"
+        android:layout_toRightOf="@id/tvSelectHorasAsignatura"
+        android:layout_marginLeft="134dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="monospace"
+        android:textSize="16dp"
+        android:text="" />
+
+</RelativeLayout>

@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/añadirAlumnoButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:width="300dp"
         android:background="@drawable/colorbotonesalumnos"
         android:fontFamily="monospace"
@@ -55,7 +55,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/selectAlumnoButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:width="300dp"
         android:background="@drawable/colorbotonesalumnos"
         android:fontFamily="monospace"
@@ -70,7 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/listAlumnoButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:width="300dp"
         android:background="@drawable/colorbotonesalumnos"
         android:fontFamily="monospace"
@@ -85,7 +85,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/modificarAlumnoButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:width="300dp"
         android:background="@drawable/colorbotonesalumnos"
         android:fontFamily="monospace"
@@ -93,4 +93,20 @@
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/calificarAlumnoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/deleteAlumnoButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:width="300dp"
+        android:background="@drawable/coloresbotonesasignaturas"
+        android:fontFamily="monospace"
+        android:text="Calificar alumno"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
 </RelativeLayout>

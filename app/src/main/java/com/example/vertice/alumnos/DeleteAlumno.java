@@ -13,7 +13,6 @@ import com.example.vertice.R;
 
 public class DeleteAlumno extends AppCompatActivity
 {
-
     StudyWorldBBDD db;
     Button deleteButton;
     EditText editTextId;

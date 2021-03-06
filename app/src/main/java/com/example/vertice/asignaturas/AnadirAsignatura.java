@@ -24,7 +24,7 @@ public class AnadirAsignatura extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_anadir_asignatura);
 
-        editNombreAsignatura = findViewById(R.id.editNombreAsignatura);
+        editNombreAsignatura = findViewById(R.id.editCalificarIDAsignatura);
         editHorasAsignatura = findViewById(R.id.editHorasAsignatura);
         addAsignaturaButton = findViewById(R.id.addNuevaAsignatura);
 

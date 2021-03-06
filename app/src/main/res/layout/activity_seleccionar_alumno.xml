@@ -7,50 +7,137 @@
     tools:context=".alumnos.SeleccionarAlumno">
 
     <EditText
-        android:id="@+id/editId"
-        android:layout_width="wrap_content"
+        android:id="@+id/editAsignaturaID"
+        android:layout_toRightOf="@id/tvIdAlumno"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
+        android:background="@drawable/colorbotonesalumnos"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="45dp"
+        android:gravity="center"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="ID" />
+        android:inputType="number" />
 
     <Button
-        android:id="@+id/selectButtoncito"
-        android:layout_below="@id/editId"
-        android:layout_marginTop="40dp"
+        android:id="@+id/selectAsignaturaButtoncito"
+        android:layout_toRightOf="@id/editAsignaturaID"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="50dp"
         android:layout_width="wrap_content"
+        android:background="@drawable/colorbotonesalumnos"
         android:layout_height="wrap_content"
         android:text="Select" />
 
     <Button
-        android:id="@+id/backButton"
-        android:layout_below="@id/editId"
-        android:layout_toRightOf="@id/selectButtoncito"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="50dp"
+        android:id="@+id/backAsignaturaButton"
+        android:layout_below="@id/selectAsignaturaButtoncito"
+        android:background="@drawable/colorbotonesalumnos"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="225dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Back" />
 
     <TextView
-        android:id="@+id/textViewName"
+        android:id="@+id/tvSelectNombreAsignatura"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/selectButtoncito"
-        android:layout_marginTop="60dp"
-        android:layout_marginLeft="50dp"
-        android:text="TextView" />
+        android:layout_below="@id/selectAsignaturaButtoncito"
+        android:layout_marginLeft="30dp"
+        android:textStyle="bold"
+        android:layout_marginTop="115dp"
+        android:fontFamily="monospace"
+        android:text="Nombre Alumno:" />
 
     <TextView
-        android:id="@+id/textViewEmail"
-        android:layout_toRightOf="@id/textViewName"
-        android:layout_below="@id/selectButtoncito"
-        android:layout_marginTop="60dp"
-        android:layout_marginLeft="100dp"
+        android:id="@+id/tvSelectHorasAsignatura"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:layout_below="@id/tvSelectNombreAsignatura"
+        android:layout_marginLeft="30dp"
+        android:textStyle="bold"
+        android:layout_marginTop="60dp"
+        android:fontFamily="monospace"
+        android:text="Edad:" />
+
+    <TextView
+        android:id="@+id/tvEmailAlumno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSelectHorasAsignatura"
+        android:layout_marginLeft="30dp"
+        android:textStyle="bold"
+        android:layout_marginTop="60dp"
+        android:fontFamily="monospace"
+        android:text="Email: " />
+
+    <TextView
+        android:id="@+id/tvCursoAlumno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvEmailAlumno"
+        android:layout_marginLeft="30dp"
+        android:textStyle="bold"
+        android:layout_marginTop="60dp"
+        android:fontFamily="monospace"
+        android:text="Curso:" />
+
+    <TextView
+        android:id="@+id/tvNombreAlumnho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selectAsignaturaButtoncito"
+        android:layout_toRightOf="@id/tvSelectNombreAsignatura"
+        android:layout_marginLeft="50dp"
+        android:textStyle="bold"
+        android:layout_marginTop="115dp"
+        android:fontFamily="monospace"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/tvEdadAlumnho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSelectNombreAsignatura"
+        android:layout_toRightOf="@id/tvSelectHorasAsignatura"
+        android:layout_marginLeft="126dp"
+        android:textStyle="bold"
+        android:layout_marginTop="60dp"
+        android:fontFamily="monospace"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/tvEmailAlumnho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSelectHorasAsignatura"
+        android:layout_toRightOf="@id/tvEmailAlumno"
+        android:layout_marginLeft="109dp"
+        android:textStyle="bold"
+        android:layout_marginTop="60dp"
+        android:fontFamily="monospace"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/tvCursoAlumnho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tvCursoAlumno"
+        android:layout_below="@id/tvEmailAlumno"
+        android:layout_marginLeft="118dp"
+        android:textStyle="bold"
+        android:layout_marginTop="60dp"
+        android:fontFamily="monospace"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/tvIdAlumno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="monospace"
+        android:text="ID:"
+        android:layout_marginLeft="10dp"
+        android:textSize="24sp" />
+
 </RelativeLayout>

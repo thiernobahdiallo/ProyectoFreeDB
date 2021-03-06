@@ -5,62 +5,135 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".alumnos.ModificarAlumno">
-    <EditText
-        android:id="@+id/editTextID"
-        android:layout_marginTop="50dp"
-        android:layout_centerHorizontal="true"
+
+
+    <TextView
+        android:id="@+id/tvRefreshID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="ID" />
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="51dp"
+        android:fontFamily="monospace"
+        android:text="ID"
+        android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/editNombreAsignatura"
+        android:id="@+id/editCalificarIdAlumno"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/colorbotonesalumnos"
+        android:layout_marginLeft="100dp"
+        android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextID"
-        android:layout_marginTop="50dp"
-        android:layout_centerHorizontal="true"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Nombre" />
-    <EditText
-        android:id="@+id/editEdad"
+        android:inputType="number"
+        android:text="" />
+
+
+    <TextView
+        android:id="@+id/tvRefreshNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editNombreAsignatura"
-        android:layout_marginTop="50dp"
-        android:layout_centerHorizontal="true"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Edad" />
+        android:fontFamily="monospace"
+        android:text="Nombre"
+        android:layout_below="@id/tvRefreshID"
+        android:layout_marginTop="49dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/editEmail"
+        android:id="@+id/editCalificarIDAsignatura"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:layout_below="@id/editCalificarIdAlumno"
         android:layout_marginTop="50dp"
-        android:layout_below="@id/editEdad"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/colorbotonesalumnos"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Email" />
+        android:gravity="center"
+        android:text="" />
+
+
+    <TextView
+        android:id="@+id/tvRefreshEdad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:layout_below="@+id/tvRefreshNombre"
+        android:layout_marginTop="52dp"
+        android:layout_marginLeft="30dp"
+        android:text="Edad"
+        android:textSize="18sp" />
+
     <EditText
-        android:id="@+id/editCurso"
+        android:id="@+id/editNota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editCalificarIDAsignatura"
+        android:background="@drawable/colorbotonesalumnos"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="number"
+        android:gravity="center"
+        android:text="" />
+
+
+    <TextView
+        android:id="@+id/tvRefreshEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:layout_below="@id/tvRefreshEdad"
+        android:layout_marginTop="53dp"
+        android:layout_marginLeft="25dp"
+        android:text="Email"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editRefreshEmailAlumno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:layout_below="@id/editEmail"
+        android:layout_below="@id/editNota"
+        android:background="@drawable/colorbotonesalumnos"
         android:ems="10"
+        android:gravity="center"
         android:inputType="textPersonName"
-        android:text="Curso" />
+        android:text="" />
+
+
+    <TextView
+        android:id="@+id/tvRefreshCurso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:layout_below="@id/tvRefreshEmail"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="30dp"
+        android:text="Curso"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editRefreshCursoAlumno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/colorbotonesalumnos"
+        android:layout_below="@id/editRefreshEmailAlumno"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="" />
 
     <Button
         android:id="@+id/refreshButtoncito"
-        android:layout_below="@id/editCurso"
+        android:layout_below="@id/editRefreshCursoAlumno"
         android:layout_marginTop="50dp"
+        android:background="@drawable/colorbotonesalumnos"
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

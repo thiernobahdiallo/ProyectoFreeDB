@@ -35,7 +35,7 @@ public class DeleteAsignatura extends AppCompatActivity
                 db.obre();
 
                 long id = Long.parseLong(editTextAsignaturaIDdelete.getText().toString());
-                boolean result = db.borrarAlumno(id);
+                boolean result = db.borrarAsignatura(id);
 
                 if(result)
                 {

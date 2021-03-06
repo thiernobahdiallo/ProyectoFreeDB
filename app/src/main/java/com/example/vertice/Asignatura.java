@@ -7,13 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.vertice.alumnos.DeleteAlumno;
-import com.example.vertice.alumnos.ListarAlumnos;
-import com.example.vertice.alumnos.ModificarAlumno;
 import com.example.vertice.alumnos.SeleccionarAlumno;
 import com.example.vertice.asignaturas.AnadirAsignatura;
 import com.example.vertice.asignaturas.DeleteAsignatura;
 import com.example.vertice.asignaturas.ListarAsignaturas;
+import com.example.vertice.asignaturas.ModificarAsignatura;
+import com.example.vertice.asignaturas.SeleccionarAsignatura;
 
 public class Asignatura extends AppCompatActivity implements View.OnClickListener
 {
@@ -28,7 +27,7 @@ public class Asignatura extends AppCompatActivity implements View.OnClickListene
         addAsignaturaButton = findViewById(R.id.añadirAsignaturaButton);
         addAsignaturaButton.setOnClickListener(this);
 
-        selectAsignaturaButton = findViewById(R.id.selectAsignaturaButton);
+        selectAsignaturaButton = findViewById(R.id.selectAsignaturaButtoncito);
         selectAsignaturaButton.setOnClickListener(this);
 
         listAsignaturaButton = findViewById(R.id.listAsignaturaButton);
@@ -53,7 +52,7 @@ public class Asignatura extends AppCompatActivity implements View.OnClickListene
         }
         else if(v == selectAsignaturaButton)
         {
-            startActivity(new Intent(v.getContext(), SeleccionarAlumno.class));
+            startActivity(new Intent(v.getContext(), SeleccionarAsignatura.class));
         }
         else if(v == listAsignaturaButton)
         {
@@ -61,7 +60,7 @@ public class Asignatura extends AppCompatActivity implements View.OnClickListene
         }
         else if(v == modificarAsignaturaButton)
         {
-            startActivity(new Intent(v.getContext(), ModificarAlumno.class));
+            startActivity(new Intent(v.getContext(), ModificarAsignatura.class));
         }
         else if(v == deleteAsignaturaButton)
         {

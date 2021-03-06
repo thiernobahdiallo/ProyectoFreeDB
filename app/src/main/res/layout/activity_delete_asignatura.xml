@@ -8,28 +8,37 @@
 
     <EditText
         android:id="@+id/editTextAsignaturaIDdelete"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="105dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/coloresbotonesasignaturas"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="ID" />
+        android:inputType="number"
+        android:text="" />
 
     <Button
         android:id="@+id/deleteAsignaturaButtoncito"
         android:layout_width="wrap_content"
-        android:layout_below="@id/editTextAsignaturaIDdelete"
-        android:layout_marginTop="100dp"
+        android:layout_below="@id/tvAsignaturaABorrar"
+        android:layout_toRightOf="@id/editTextAsignaturaIDdelete"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:background="@drawable/coloresbotonesasignaturas"
         android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
         android:text="Delete" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvAsignaturaABorrar"
+        android:layout_width="350dp"
+        android:gravity="center"
+        android:textSize="20dp"
         android:layout_height="wrap_content"
-        android:text="INTRODUCE ID ASIGNATURA"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"/>
+        android:background="@drawable/coloresbotonesasignaturas"
+        android:textStyle="bold"
+        android:text="¿Cuál es el ID de la asignatura a borrar?" />
 </RelativeLayout>

@@ -16,7 +16,7 @@ public class ModificarAlumno extends AppCompatActivity
     StudyWorldBBDD db;
     Button refresh;
 
-    private EditText editId, editName, editEdad,editEmail,editCurso;
+    private EditText editId, editName, editEdad, editEmail, editCurso;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -25,11 +25,12 @@ public class ModificarAlumno extends AppCompatActivity
         setContentView(R.layout.activity_modificar_alumno);
 
         refresh = findViewById(R.id.refreshButtoncito);
-        editId = findViewById(R.id.editTextID);
-        editName = findViewById(R.id.editNombreAsignatura);
-        editEdad = findViewById(R.id.editEdad);
-        editEmail = findViewById(R.id.editEmail);
-        editCurso= findViewById(R.id.editCurso);
+        editId = findViewById(R.id.editCalificarIdAlumno);
+        editName = findViewById(R.id.editCalificarIDAsignatura);
+        editEdad = findViewById(R.id.editNota);
+        editEmail = findViewById(R.id.editRefreshEmailAlumno);
+        editCurso = findViewById(R.id.editRefreshCursoAlumno);
+
         refresh.setOnClickListener(new View.OnClickListener()
         {
             @Override

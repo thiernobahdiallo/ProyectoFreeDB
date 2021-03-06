@@ -14,11 +14,14 @@
         <activity android:name=".alumnos.ModificarAlumno" />
         <activity android:name=".alumnos.ListarAlumnos" />
         <activity android:name=".alumnos.AnadirAlumno" />
+        <activity android:name=".alumnos.CalificarAlumno" />
         <activity android:name=".Asignatura" />
         <activity android:name=".Alumno" />
         <activity android:name=".asignaturas.AnadirAsignatura" />
         <activity android:name=".asignaturas.DeleteAsignatura" />
         <activity android:name=".asignaturas.ListarAsignaturas" />
+        <activity android:name=".asignaturas.ModificarAsignatura" />
+        <activity android:name=".asignaturas.SeleccionarAsignatura" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

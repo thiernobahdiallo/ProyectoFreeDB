@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.vertice.alumnos.CalificarAlumno;
 import com.example.vertice.alumnos.DeleteAlumno;
 import com.example.vertice.alumnos.ListarAlumnos;
 import com.example.vertice.alumnos.ModificarAlumno;
@@ -15,7 +16,7 @@ import com.example.vertice.alumnos.AnadirAlumno;
 
 public class Alumno extends AppCompatActivity implements View.OnClickListener
 {
-    Button addAlumnoButton, selectAlumnoButton, listAlumnoButton, modificarAlumnoButton, deleteAlumnoButton, moveToAsignaturas;
+    Button addAlumnoButton, selectAlumnoButton, listAlumnoButton, modificarAlumnoButton, deleteAlumnoButton, moveToAsignaturas, calificarAlumno;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -40,6 +41,9 @@ public class Alumno extends AppCompatActivity implements View.OnClickListener
 
         moveToAsignaturas = findViewById(R.id.moveToAsignaturas);
         moveToAsignaturas.setOnClickListener(this);
+
+        calificarAlumno = findViewById(R.id.calificarAlumnoButton);
+        calificarAlumno.setOnClickListener(this);
     }
 
     @Override
@@ -68,6 +72,10 @@ public class Alumno extends AppCompatActivity implements View.OnClickListener
         else if(v == moveToAsignaturas)
         {
             startActivity(new Intent(v.getContext(), Asignatura.class));
+        }
+        else if(v == calificarAlumno)
+        {
+            startActivity(new Intent(v.getContext(), CalificarAlumno.class));
         }
     }
 }

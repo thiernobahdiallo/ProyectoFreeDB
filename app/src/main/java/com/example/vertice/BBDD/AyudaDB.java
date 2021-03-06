@@ -10,6 +10,7 @@ import android.util.Log;
 
 import static com.example.vertice.BBDD.StudyWorldBBDD.BD_CREATE_ALUMNOS;
 import static com.example.vertice.BBDD.StudyWorldBBDD.BD_CREATE_ASIGNATURAS;
+import static com.example.vertice.BBDD.StudyWorldBBDD.BD_CREATE_CURSAR;
 import static com.example.vertice.BBDD.StudyWorldBBDD.TABLA_ALUMNOS;
 import static com.example.vertice.BBDD.StudyWorldBBDD.TABLA_ASIGNATURAS;
 import static com.example.vertice.BBDD.StudyWorldBBDD.TAG;
@@ -30,6 +31,9 @@ public class AyudaDB extends SQLiteOpenHelper
         {
             db.execSQL(BD_CREATE_ALUMNOS);
             db.execSQL(BD_CREATE_ASIGNATURAS);
+
+            // AQUI SE CREA LA TABLA CURSAR.
+            db.execSQL(BD_CREATE_CURSAR);
         }
         catch(SQLException e)
         {

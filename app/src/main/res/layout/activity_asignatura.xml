@@ -35,7 +35,7 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/selectAsignaturaButton"
+        android:id="@+id/selectAsignaturaButtoncito"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/añadirAsignaturaButton"
@@ -53,7 +53,7 @@
         android:id="@+id/listAsignaturaButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/selectAsignaturaButton"
+        android:layout_below="@id/selectAsignaturaButtoncito"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:width="300dp"
