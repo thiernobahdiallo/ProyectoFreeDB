@@ -8,13 +8,13 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 
-import static com.example.vertice.BBDD.VerticeBBDD.BD_CREATE_ALUMNOS;
-import static com.example.vertice.BBDD.VerticeBBDD.BD_CREATE_ASIGNATURAS;
-import static com.example.vertice.BBDD.VerticeBBDD.TABLA_ALUMNOS;
-import static com.example.vertice.BBDD.VerticeBBDD.TABLA_ASIGNATURAS;
-import static com.example.vertice.BBDD.VerticeBBDD.TAG;
-import static com.example.vertice.BBDD.VerticeBBDD.NOMBRE_BD;
-import static com.example.vertice.BBDD.VerticeBBDD.VERSIO;
+import static com.example.vertice.BBDD.StudyWorldBBDD.BD_CREATE_ALUMNOS;
+import static com.example.vertice.BBDD.StudyWorldBBDD.BD_CREATE_ASIGNATURAS;
+import static com.example.vertice.BBDD.StudyWorldBBDD.TABLA_ALUMNOS;
+import static com.example.vertice.BBDD.StudyWorldBBDD.TABLA_ASIGNATURAS;
+import static com.example.vertice.BBDD.StudyWorldBBDD.TAG;
+import static com.example.vertice.BBDD.StudyWorldBBDD.NOMBRE_BD;
+import static com.example.vertice.BBDD.StudyWorldBBDD.VERSIO;
 
 public class AyudaDB extends SQLiteOpenHelper
 {
@@ -44,6 +44,5 @@ public class AyudaDB extends SQLiteOpenHelper
         db.execSQL("DROP TABLE IF EXISTS " + TABLA_ALUMNOS);
         db.execSQL("DROP TABLE IF EXISTS " + TABLA_ASIGNATURAS);
         onCreate(db);
-
     }
 }

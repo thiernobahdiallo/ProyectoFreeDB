@@ -1,4 +1,4 @@
-package com.example.vertice.BBDD;
+package com.example.vertice.alumnos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,14 +10,16 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.vertice.BBDD.StudyWorldBBDD;
 import com.example.vertice.R;
 
-public class SeleccionarAlumno extends AppCompatActivity implements View.OnClickListener{
-
-    private VerticeBBDD db;
+public class SeleccionarAlumno extends AppCompatActivity implements View.OnClickListener
+{
+    private StudyWorldBBDD db;
     private EditText editId;
     private TextView name, email;
     private Button selectButton, backButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -42,7 +44,7 @@ public class SeleccionarAlumno extends AppCompatActivity implements View.OnClick
         if(v == selectButton)
         {
             Cursor c;
-            db = new VerticeBBDD(this.getApplicationContext());
+            db = new StudyWorldBBDD(this.getApplicationContext());
             db.obre();
             long id = Long.parseLong(editId.getText().toString());
             c = db.obtenerAlumno(id);

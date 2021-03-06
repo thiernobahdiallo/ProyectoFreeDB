@@ -1,4 +1,4 @@
-package com.example.vertice.BBDD;
+package com.example.vertice.alumnos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,15 +8,19 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.vertice.BBDD.StudyWorldBBDD;
 import com.example.vertice.R;
 
-public class DeleteAlumno extends AppCompatActivity {
+public class DeleteAlumno extends AppCompatActivity
+{
 
-    VerticeBBDD db;
+    StudyWorldBBDD db;
     Button deleteButton;
     EditText editTextId;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delete_alumno);
 
@@ -28,17 +32,17 @@ public class DeleteAlumno extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                db = new VerticeBBDD(getApplicationContext());
+                db = new StudyWorldBBDD(getApplicationContext());
                 db.obre();
                 long id = Long.parseLong(editTextId.getText().toString());
                 boolean result = db.borrarAlumno(id);
                 if(result)
                 {
-                    Toast.makeText(getApplicationContext(), "Element esborrat", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Alumno expulsado por copiar", Toast.LENGTH_SHORT).show();
                 }
                 else
                 {
-                    Toast.makeText(getApplicationContext(), "No se ha borrado el elemento", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "No se ha expulsado al alumno", Toast.LENGTH_SHORT).show();
                 }
                 db.tanca();
                 finish();

@@ -7,7 +7,7 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 
 
-public class VerticeBBDD
+public class StudyWorldBBDD
 {
     public static final String NOMBRE_BD = "StudyWorld";
     public static final String TAG = "DBInterface";
@@ -40,6 +40,7 @@ public class VerticeBBDD
     public static final String ID_ALUMNO_CURSANDO = "id_Alumn_Curso";
     public static final String NOTA_ALUMNO = "nota";
     public static final String BD_CREATE_CURSAR = "create table " + TABLA_CURSAR
+            +" ( "
             + NOTA_ALUMNO + " integer NOT NULL, "
             + "FOREIGN KEY ("+ ID_ALUMNO_CURSANDO +") REFERENCES " + TABLA_ALUMNOS +
             "(" + ID_ALUMNO + ")"
@@ -52,13 +53,13 @@ public class VerticeBBDD
     private AyudaDB ayuda;
     private SQLiteDatabase db;
 
-    public VerticeBBDD(Context context)
+    public StudyWorldBBDD(Context context)
     {
         this.context = context;
         ayuda = new AyudaDB(context);
     }
 
-    public VerticeBBDD obre() throws SQLException
+    public StudyWorldBBDD obre() throws SQLException
     {
         db = ayuda.getWritableDatabase();
         return this;
@@ -79,12 +80,13 @@ public class VerticeBBDD
         return db.insert(TABLA_ALUMNOS, null, initialValues);
     }
 
+
     public long añadirAsignaturas(String nombre, String horas)
     {
         ContentValues initialValues = new ContentValues();
         initialValues.put(NOMBRE_ASIGNATURA, nombre);
         initialValues.put(HORAS, horas);
-        return db.insert(TABLA_ALUMNOS, null, initialValues);
+        return db.insert(TABLA_ASIGNATURAS, null, initialValues);
     }
 
     public boolean borrarAlumno(long IDFila)

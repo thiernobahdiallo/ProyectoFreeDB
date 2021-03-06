@@ -48,15 +48,18 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                // Los EditText NO están vacios
-                if(usuario.getText().toString().equals(pref.getUser()) && password.getText().toString().equals(pref.getPassword()))
-                {
-                    Toast.makeText(getApplicationContext(), "Intent a la actividad", Toast.LENGTH_LONG).show();
-                }
-                else
-                {
-                    Toast.makeText(getApplicationContext(), "El usuario no existe", Toast.LENGTH_LONG).show();
-                }
+                logIn();
+
+//                // Los EditText NO están vacios
+//                if(usuario.getText().toString().equals(pref.getUser()) && password.getText().toString().equals(pref.getPassword()))
+//                {
+//                    Toast.makeText(getApplicationContext(), "Intent a la actividad", Toast.LENGTH_LONG).show();
+//                    logIn();
+//                }
+//                else
+//                {
+//                    Toast.makeText(getApplicationContext(), "El usuario no existe", Toast.LENGTH_LONG).show();
+//                }
             }
         });
     }
@@ -76,13 +79,9 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    public void AbrirMenu(View view)
-    {
-        Intent intent = new Intent(this, Menu.class);
-        startActivity(intent);
-    }
     private void logIn()
     {
-
+        Intent intent = new Intent(this, Alumno.class);
+        startActivity(intent);
     }
 }

@@ -32,21 +32,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView" />
-    <TextView
-        android:id="@+id/textViewEMAIL"
-        android:layout_below="@id/tvAsignaturaHoras"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="50dp"
-        android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-    <TextView
-        android:id="@+id/textViewCurso"
-        android:layout_width="wrap_content"
-        android:layout_below="@id/textViewEMAIL"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
+
 </RelativeLayout>

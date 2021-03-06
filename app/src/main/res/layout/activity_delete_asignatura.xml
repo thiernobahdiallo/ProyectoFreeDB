@@ -7,7 +7,7 @@
     tools:context=".alumnos.DeleteAlumno">
 
     <EditText
-        android:id="@+id/editTextIDdelete"
+        android:id="@+id/editTextAsignaturaIDdelete"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:layout_width="wrap_content"
@@ -17,11 +17,19 @@
         android:text="ID" />
 
     <Button
-        android:id="@+id/deleteButtoncito"
+        android:id="@+id/deleteAsignaturaButtoncito"
         android:layout_width="wrap_content"
-        android:layout_below="@id/editTextIDdelete"
+        android:layout_below="@id/editTextAsignaturaIDdelete"
         android:layout_marginTop="100dp"
         android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
         android:text="Delete" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="INTRODUCE ID ASIGNATURA"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
 </RelativeLayout>

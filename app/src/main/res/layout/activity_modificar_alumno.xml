@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BBDD.ModificarAlumno">
+    tools:context=".alumnos.ModificarAlumno">
     <EditText
         android:id="@+id/editTextID"
         android:layout_marginTop="50dp"
@@ -16,7 +16,7 @@
         android:text="ID" />
 
     <EditText
-        android:id="@+id/editName"
+        android:id="@+id/editNombreAsignatura"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextID"
@@ -29,7 +29,7 @@
         android:id="@+id/editEdad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editName"
+        android:layout_below="@id/editNombreAsignatura"
         android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true"
         android:ems="10"

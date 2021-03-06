@@ -5,7 +5,7 @@ import android.content.SharedPreferences;
 
 public class Preferencies
 {
-    private static final String NOM_PREFERENCIES = "PreferenciasVertice";
+    private static final String NOM_PREFERENCIES = "PreferenciasBBDD";
     private final static String CLAU_USER="usuario";
     private final static String CLAU_PASSWD="password";
 

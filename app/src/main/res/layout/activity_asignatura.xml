@@ -4,93 +4,94 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Alumno"
-    android:background="#4D94FF">
+    android:background="#F870AB"
+    tools:context=".Asignatura">
+
+    <ImageView
+        android:id="@+id/pestanyaAsignaturas"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/pestanyaasignaturas" />
 
     <Button
-        android:id="@+id/moveToAsignaturas"
+        android:id="@+id/moveToAlumnos"
         android:layout_width="170dp"
         android:alpha="0"
         android:layout_height="50dp"
-        android:layout_marginLeft="220dp"/>
-
-    <ImageView
-        android:id="@+id/pestanyaAlumnos"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        app:srcCompat="@drawable/pestanyaalumnos" />
+        android:layout_marginLeft="15dp"/>
 
     <Button
-        android:id="@+id/añadirAlumnoButton"
+        android:id="@+id/añadirAsignaturaButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:width="300dp"
-        android:background="@drawable/colorbotonesalumnos"
+        android:background="@drawable/coloresbotonesasignaturas"
         android:fontFamily="monospace"
-        android:text="Añadir Alumno"
-        android:textColor="#FFFDFD"
+        android:text="Añadir Asignatura"
+        android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/selectAlumnoButton"
+        android:id="@+id/selectAsignaturaButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/añadirAlumnoButton"
+        android:layout_below="@id/añadirAsignaturaButton"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:width="300dp"
-        android:background="@drawable/colorbotonesalumnos"
+        android:background="@drawable/coloresbotonesasignaturas"
         android:fontFamily="monospace"
-        android:text="Seleccionar ALUMNO"
-        android:textColor="#FFFFFF"
+        android:text="Seleccionar Asignatura"
+        android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/listAlumnoButton"
+        android:id="@+id/listAsignaturaButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/selectAlumnoButton"
+        android:layout_below="@id/selectAsignaturaButton"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:width="300dp"
-        android:background="@drawable/colorbotonesalumnos"
+        android:background="@drawable/coloresbotonesasignaturas"
         android:fontFamily="monospace"
-        android:text="Listar alumnos"
-        android:textColor="#FFFFFF"
+        android:text="Listar asignaturas"
+        android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/modificarAlumnoButton"
+        android:id="@+id/modificarAsignaturaButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/listAlumnoButton"
+        android:layout_below="@id/listAsignaturaButton"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:width="300dp"
-        android:background="@drawable/colorbotonesalumnos"
+        android:background="@drawable/coloresbotonesasignaturas"
         android:fontFamily="monospace"
-        android:text="Modificar alumno"
-        android:textColor="#FFFFFF"
+        android:text="Modificar asignatura"
+        android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/deleteAlumnoButton"
+        android:id="@+id/deleteAsignaturaButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/modificarAlumnoButton"
+        android:layout_below="@id/modificarAsignaturaButton"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:width="300dp"
-        android:background="@drawable/colorbotonesalumnos"
+        android:background="@drawable/coloresbotonesasignaturas"
         android:fontFamily="monospace"
-        android:text="Borrar alumno"
-        android:textColor="#FFFFFF"
+        android:text="Borrar asignatura"
+        android:textColor="#020101"
         android:textSize="18sp"
         android:textStyle="bold" />
+
 </RelativeLayout>

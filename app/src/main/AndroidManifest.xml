@@ -8,16 +8,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Vertice">
-        <activity android:name=".BBDD.SeleccionarAlumno"></activity>
-        <activity android:name=".BBDD.DeleteAlumno" />
-        <activity android:name=".BBDD.ModificarAlumno" />
-        <activity android:name=".BBDD.ListarAlumnos" />
-        <activity android:name=".BBDD.AnadirAlumnos" />
-        <activity android:name=".Asignaturas" />
-        <activity android:name=".Alumnos" />
-        <activity android:name=".Menu" />
-        <activity android:name=".mosaico.Mosaico" />
+        android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">
+        <activity android:name=".alumnos.SeleccionarAlumno"></activity>
+        <activity android:name=".alumnos.DeleteAlumno" />
+        <activity android:name=".alumnos.ModificarAlumno" />
+        <activity android:name=".alumnos.ListarAlumnos" />
+        <activity android:name=".alumnos.AnadirAlumno" />
+        <activity android:name=".Asignatura" />
+        <activity android:name=".Alumno" />
+        <activity android:name=".asignaturas.AnadirAsignatura" />
+        <activity android:name=".asignaturas.DeleteAsignatura" />
+        <activity android:name=".asignaturas.ListarAsignaturas" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
