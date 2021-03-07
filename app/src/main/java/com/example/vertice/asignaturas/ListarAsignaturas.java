@@ -42,7 +42,7 @@ public class ListarAsignaturas extends ListActivity
             c.moveToNext();
         }
         db.tanca();
-        adapter = new SimpleAdapter(this, llista, R.layout.activity_listar_asignaturas, new String[]{"id_A", "nom_A", "horas"}, new int[]{R.id.tvAsignaturaID, R.id.tvAsignaturaNombre, R.id.tvAsignaturaHoras});
+        adapter = new SimpleAdapter(this, llista, R.layout.activity_listar_asignaturas, new String[]{"id_A", "nom_A", "horas"}, new int[]{R.id.tvRowAsignaturaId, R.id.tvRowNombreAsignatura, R.id.tvRowHorasAsignatura});
         setListAdapter(adapter);
     }
 }

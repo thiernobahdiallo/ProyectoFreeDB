@@ -7,62 +7,10 @@
     android:background="#4D94FF"
     tools:context=".alumnos.ListarAlumnos">
 
-    <TextView
-        android:id="@+id/tvAsignaturaID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:text="TextView"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"/>
 
-    <TextView
-        android:id="@+id/tvAsignaturaNombre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tvAsignaturaID"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="TextView"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/tvAsignaturaHoras"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tvAsignaturaNombre"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="TextView"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textViewEMAIL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tvAsignaturaHoras"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="TextView"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textViewCurso"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textViewEMAIL"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="TextView"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:textStyle="bold" />
 </RelativeLayout>

@@ -5,6 +5,11 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
+
+import com.example.vertice.alumnos.Estudiante;
+
+import java.util.ArrayList;
 
 
 public class StudyWorldBBDD
@@ -180,4 +185,32 @@ public class StudyWorldBBDD
         return db.update(TABLA_ASIGNATURAS, args, ID_ASIGNATURA + " = " + IDFila, null) > 0;
     }
     // -------------------------------------------------------
+
+    public ArrayList<Estudiante> getAllEstudiantes()
+    {
+        ArrayList<Estudiante> estudiantes = new ArrayList<>();
+        Cursor cursor = db.query(TABLA_ALUMNOS, new String[] {ID_ALUMNO, NOMBRE_ALUMNO, EDAD_ALUMNO, EMAIL_ALUMNO, CURSO_ALUMNO}, null, null, null, null, null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast())
+        {
+            Estudiante estudiante = cursorToEstudiante(cursor);
+            estudiantes.add(estudiante);
+            cursor.moveToNext();
+        }
+        // Make sure to close the cursor
+        cursor.close();
+        return estudiantes;
+    }
+
+    private Estudiante cursorToEstudiante(Cursor cursor)
+    {
+        Estudiante estudiante = new Estudiante();
+        estudiante.setId_alumno(cursor.getString(0));
+        estudiante.setNombre_alumno(cursor.getString(1));
+        estudiante.setEdad(cursor.getString(2));
+        estudiante.setEmail(cursor.getString(3));
+        estudiante.setCurso(cursor.getString(4));
+        Log.d("Estudiante: ", estudiante.getId_alumno() + " - " + estudiante.getNombre_alumno() + " - " + estudiante.getEdad() + " - " + estudiante.getEmail() + " - " + estudiante.getCurso());
+        return estudiante;
+    }
 }
