@@ -34,20 +34,28 @@ public class ModificarAsignatura extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                long id;
-                db = new StudyWorldBBDD(getApplicationContext());
-                db.obre();
-                id = Long.parseLong(editAsignaturaId.getText().toString());
-                boolean result = db.actualizarAsignatura(id,editNombreAsignatura.getText().toString(), editAsignaturaHoras.getText().toString());
-                if(result)
+                // Aqui hacemos un control de errores del usuario: El usuario puede modificar asignaturas sin el campo horas.
+                if (editAsignaturaId.getText().toString().equals("") || editNombreAsignatura.getText().toString().equals(""))
                 {
-                    Toast.makeText(getApplicationContext(), "Asignatura modificada", Toast.LENGTH_SHORT).show();
-                }
-                else
-                {
-                    Toast.makeText(getApplicationContext(), "No se ha podido modificar la asignatura", Toast.LENGTH_SHORT).show();
-                    db.tanca();
+                    Toast.makeText(getApplicationContext(), "No puedes modificar un asignatura sin especificaar su id", Toast.LENGTH_SHORT).show();
                     finish();
+                }
+                else {
+                    long id;
+                    db = new StudyWorldBBDD(getApplicationContext());
+                    db.obre();
+                    id = Long.parseLong(editAsignaturaId.getText().toString());
+                    boolean result = db.actualizarAsignatura(id,editNombreAsignatura.getText().toString(), editAsignaturaHoras.getText().toString());
+                    if(result)
+                    {
+                        Toast.makeText(getApplicationContext(), "Asignatura modificada", Toast.LENGTH_SHORT).show();
+                    }
+                    else
+                    {
+                        Toast.makeText(getApplicationContext(), "No se ha podido modificar la asignatura", Toast.LENGTH_SHORT).show();
+                        db.tanca();
+                        finish();
+                    }
                 }
             }
         });

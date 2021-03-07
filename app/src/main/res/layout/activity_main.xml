@@ -4,34 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#4CAF50"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/Title"
         android:layout_width="300dp"
-        android:gravity="center"
         android:layout_height="wrap_content"
-        android:fontFamily="monospace"
-        android:text="Introduce tu cuenta:"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:background="@drawable/colorbotonesalumnos"
-        android:textSize="20sp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"/>
+        android:layout_marginTop="40dp"
+        android:background="@drawable/colorbotonesalumnos"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="Introduce tu cuenta:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
-        android:layout_below="@id/Title"
-        android:layout_marginTop="30dp"
-        android:gravity="center"
-        android:textSize="25dp"
-        android:layout_marginLeft="10dp"
         android:id="@+id/Usuario"
-        android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/Title"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="monospace"
-        android:text="Usuario:" />
+        android:gravity="center"
+        android:text="Usuario:"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editTextUsuario"
@@ -43,24 +45,25 @@
         android:layout_toRightOf="@id/Usuario"
         android:background="@drawable/coloresbotonesasignaturas"
         android:ems="10"
-        android:gravity="center"
         android:fontFamily="monospace"
+        android:gravity="center"
         android:inputType="textPersonName"
         android:textColor="@color/black"
         android:textSize="20dp" />
 
     <TextView
-        android:layout_below="@id/Usuario"
-        android:layout_marginTop="30dp"
-        android:gravity="center"
-        android:textSize="25dp"
-        android:layout_marginLeft="10dp"
         android:id="@+id/Password"
-        android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/Usuario"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="monospace"
-        android:text="Password:" />
+        android:gravity="center"
+        android:text="Password:"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editTextPassword"
@@ -72,8 +75,8 @@
         android:layout_toRightOf="@id/Password"
         android:background="@drawable/coloresbotonesasignaturas"
         android:ems="10"
-        android:gravity="center"
         android:fontFamily="monospace"
+        android:gravity="center"
         android:inputType="textPassword"
         android:textColor="@color/black"
         android:textSize="20dp" />
@@ -82,21 +85,25 @@
         android:id="@+id/loginButton"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
-        android:layout_marginLeft="50dp"
         android:layout_below="@id/editTextPassword"
-        android:background="@drawable/colorbotonesalumnos"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="250dp"
         android:layout_toRightOf="@id/registrarButton"
-        android:text="Log In" />
+        android:background="@drawable/colorbotonesalumnos"
+        android:text="Log In"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
 
     <Button
-        android:layout_below="@id/Password"
-        android:layout_marginTop="250dp"
-        android:layout_marginLeft="30dp"
-        android:background="@drawable/colorbotonesalumnos"
         android:id="@+id/registrarButton"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="Registrarse" />
+        android:layout_below="@id/Password"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="250dp"
+        android:background="@drawable/colorbotonesalumnos"
+        android:text="Registrarse"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
 
 </RelativeLayout>

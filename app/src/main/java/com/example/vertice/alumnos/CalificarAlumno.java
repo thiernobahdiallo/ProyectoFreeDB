@@ -34,18 +34,26 @@ public class CalificarAlumno extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                db = new StudyWorldBBDD(getApplicationContext());
-                db.obre();
-                if(db.anadirNotas(editIDAlumno.getText().toString(), editIDAsignatura.getText().toString(), editNota.getText().toString()) != -1)
+                // Aqui hacemos un control de errores del usuario: El alumno no puede ser calificado sin especificar el id del alumno, el de asignatura y la nota.
+                if (editIDAlumno.getText().toString().equals("") || editIDAsignatura.getText().toString().equals("") || editNota.getText().toString().equals(""))
                 {
-                    Toast.makeText(getApplicationContext(), "Nota añadida correctamente", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "No puedes calificar un alumno sin especificar los id's", Toast.LENGTH_SHORT).show();
+                    finish();
                 }
-                else
-                {
-                    Toast.makeText(getApplicationContext(), "FALLO AL AÑADIR nota", Toast.LENGTH_SHORT).show();
+                else {
+                    db = new StudyWorldBBDD(getApplicationContext());
+                    db.obre();
+                    if(db.anadirNotas(editIDAlumno.getText().toString(), editIDAsignatura.getText().toString(), editNota.getText().toString()) != -1)
+                    {
+                        Toast.makeText(getApplicationContext(), "Nota añadida correctamente", Toast.LENGTH_SHORT).show();
+                    }
+                    else
+                    {
+                        Toast.makeText(getApplicationContext(), "FALLO AL AÑADIR nota", Toast.LENGTH_SHORT).show();
+                    }
+                    db.tanca();
+                    finish();
                 }
-                db.tanca();
-                finish();
             }
         });
     }

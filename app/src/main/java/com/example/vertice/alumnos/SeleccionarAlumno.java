@@ -52,24 +52,34 @@ public class SeleccionarAlumno extends AppCompatActivity implements View.OnClick
     {
         if(v == selectButton)
         {
-            Cursor c;
-            db = new StudyWorldBBDD(this.getApplicationContext());
-            db.obre();
-            long id = Long.parseLong(editAlumnoID.getText().toString());
-            c = db.obtenerAlumno(id);
-            if(c.getCount() != 0)
+            // Aqui hacemos un control de errores para evitar que el usuario introduzca datos vacios en la bdd
+            if (editAlumnoID.getText().toString().equals(""))
             {
-                nombreAlumnho.setText(c.getString(1));
-                edadAlumnho.setText(c.getString(2));
-                emailAlumnho.setText(c.getString(3));
-                cursoAlumnho.setText(c.getString(4));
-                Toast.makeText(this, "Element con id: " + c.getString(0) + " consultado correctamente.",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "No puedes meter valores vacios en la base de datos", Toast.LENGTH_SHORT).show();
+                finish();
             }
+            // Si el usario mete datos con contendio seguimos con el programa y metemos los datos del alumno en la base de datos.
             else
-            {
-                Toast.makeText(this, "ID inexistente ",Toast.LENGTH_SHORT).show();
+                {
+                    Cursor c;
+                    db = new StudyWorldBBDD(this.getApplicationContext());
+                    db.obre();
+                    long id = Long.parseLong(editAlumnoID.getText().toString());
+                    c = db.obtenerAlumno(id);
+                    if(c.getCount() != 0)
+                    {
+                        nombreAlumnho.setText(c.getString(1));
+                        edadAlumnho.setText(c.getString(2));
+                        emailAlumnho.setText(c.getString(3));
+                        cursoAlumnho.setText(c.getString(4));
+                        Toast.makeText(this, "Element con id: " + c.getString(0) + " consultado correctamente.",Toast.LENGTH_SHORT).show();
+                    }
+                    else
+                    {
+                        Toast.makeText(this, "ID inexistente ",Toast.LENGTH_SHORT).show();
+                    }
+                    db.tanca();
             }
-            db.tanca();
         }
         else if(v == backButton)
         {

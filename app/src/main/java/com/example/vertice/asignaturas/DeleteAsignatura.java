@@ -31,22 +31,30 @@ public class DeleteAsignatura extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                db = new StudyWorldBBDD(getApplicationContext());
-                db.obre();
-
-                long id = Long.parseLong(editTextAsignaturaIDdelete.getText().toString());
-                boolean result = db.borrarAsignatura(id);
-
-                if(result)
+                // Aqui hacemos un control de errores del usuario: El usuario puede meter asignaturas sin el campo horas.
+                if (editTextAsignaturaIDdelete.getText().toString().equals(""))
                 {
-                    Toast.makeText(getApplicationContext(), "Asignatura eliminada", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "No puedes borrar un asignatura sin especificaar su id", Toast.LENGTH_SHORT).show();
+                    finish();
                 }
-                else
-                {
-                    Toast.makeText(getApplicationContext(), "No se ha podido eliminar la asignatura", Toast.LENGTH_SHORT).show();
+                else {
+                    db = new StudyWorldBBDD(getApplicationContext());
+                    db.obre();
+
+                    long id = Long.parseLong(editTextAsignaturaIDdelete.getText().toString());
+                    boolean result = db.borrarAsignatura(id);
+
+                    if(result)
+                    {
+                        Toast.makeText(getApplicationContext(), "Asignatura eliminada", Toast.LENGTH_SHORT).show();
+                    }
+                    else
+                    {
+                        Toast.makeText(getApplicationContext(), "No se ha podido eliminar la asignatura", Toast.LENGTH_SHORT).show();
+                    }
+                    db.tanca();
+                    finish();
                 }
-                db.tanca();
-                finish();
             }
         });
     }

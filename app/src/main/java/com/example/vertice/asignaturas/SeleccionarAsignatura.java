@@ -44,29 +44,37 @@ public class SeleccionarAsignatura extends AppCompatActivity implements View.OnC
     @Override
     public void onClick(View v)
     {
-        if(v == selectAsignaturaButton)
+        // Aqui hacemos un control de errores del usuario: El usuario puede modificar asignaturas sin el campo horas.
+        if (editAsignaturaId.getText().toString().equals(""))
         {
-            Cursor c;
-            db = new StudyWorldBBDD(this.getApplicationContext());
-            db.obre();
-            long id = Long.parseLong(editAsignaturaId.getText().toString());
-            c = db.obtenerAsignatura(id);
-
-            if(c.getCount() != 0)
-            {
-                nombreAsignaturha.setText(c.getString(1));
-                horasAsignaturha.setText(c.getString(2));
-                Toast.makeText(this, "Asignatura con id: " + c.getString(0) + " consultada correctamente.",Toast.LENGTH_SHORT).show();
-            }
-            else
-            {
-                Toast.makeText(this, "ID inexistentee ",Toast.LENGTH_SHORT).show();
-            }
-            db.tanca();
-        }
-        else if(v == backAsignaturaButton)
-        {
+            Toast.makeText(getApplicationContext(), "No puedes seleccionar una asignatura sin especificar su id", Toast.LENGTH_SHORT).show();
             finish();
+        }
+        else {
+            if(v == selectAsignaturaButton)
+            {
+                Cursor c;
+                db = new StudyWorldBBDD(this.getApplicationContext());
+                db.obre();
+                long id = Long.parseLong(editAsignaturaId.getText().toString());
+                c = db.obtenerAsignatura(id);
+
+                if(c.getCount() != 0)
+                {
+                    nombreAsignaturha.setText(c.getString(1));
+                    horasAsignaturha.setText(c.getString(2));
+                    Toast.makeText(this, "Asignatura con id: " + c.getString(0) + " consultada correctamente.",Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    Toast.makeText(this, "ID inexistentee ",Toast.LENGTH_SHORT).show();
+                }
+                db.tanca();
+            }
+            else if(v == backAsignaturaButton)
+            {
+                finish();
+            }
         }
     }
 }

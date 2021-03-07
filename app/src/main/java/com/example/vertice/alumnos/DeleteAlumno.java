@@ -31,20 +31,28 @@ public class DeleteAlumno extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                db = new StudyWorldBBDD(getApplicationContext());
-                db.obre();
-                long id = Long.parseLong(editTextId.getText().toString());
-                boolean result = db.borrarAlumno(id);
-                if(result)
+                // Aqui hacemos un porque no se puede borrar ningun alumno sin especificar su id
+                if (editTextId.getText().toString().equals(""))
                 {
-                    Toast.makeText(getApplicationContext(), "Alumno expulsado por copiar", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Tienes que poner un id para poder borrar alumnos", Toast.LENGTH_SHORT).show();
+                    finish();
                 }
-                else
-                {
-                    Toast.makeText(getApplicationContext(), "No se ha expulsado al alumno", Toast.LENGTH_SHORT).show();
+                else{
+                    db = new StudyWorldBBDD(getApplicationContext());
+                    db.obre();
+                    long id = Long.parseLong(editTextId.getText().toString());
+                    boolean result = db.borrarAlumno(id);
+                    if(result)
+                    {
+                        Toast.makeText(getApplicationContext(), "Alumno expulsado por copiar", Toast.LENGTH_SHORT).show();
+                    }
+                    else
+                    {
+                        Toast.makeText(getApplicationContext(), "No se ha expulsado al alumno", Toast.LENGTH_SHORT).show();
+                    }
+                    db.tanca();
+                    finish();
                 }
-                db.tanca();
-                finish();
             }
         });
     }

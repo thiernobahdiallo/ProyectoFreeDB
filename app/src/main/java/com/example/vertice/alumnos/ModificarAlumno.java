@@ -36,20 +36,29 @@ public class ModificarAlumno extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                long id;
-                db = new StudyWorldBBDD(getApplicationContext());
-                db.obre();
-                id = Long.parseLong(editId.getText().toString());
-                boolean result = db.actualizarAlumno(id,editName.getText().toString(), editEdad.getText().toString(), editEmail.getText().toString(), editCurso.getText().toString());
-                if(result)
+                // Aqui hacemos un control de errores para evitar que modfique campos vacios , en cambio si puede modificar un alumno sin ponerle un curso
+                if (editId.getText().toString().equals("") || editEmail.getText().toString().equals("") || editEdad.getText().toString().equals("") || editName.getText().toString().equals(""))
                 {
-                    Toast.makeText(getApplicationContext(), "Elemento modificado", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "No puedes modificar valores vacios ", Toast.LENGTH_SHORT).show();
+                    finish();
                 }
                 else
-                {
-                    Toast.makeText(getApplicationContext(), "No se ha podido modificar el elemento", Toast.LENGTH_SHORT).show();
-                    db.tanca();
-                    finish();
+                    {
+                        long id;
+                        db = new StudyWorldBBDD(getApplicationContext());
+                        db.obre();
+                        id = Long.parseLong(editId.getText().toString());
+                        boolean result = db.actualizarAlumno(id,editName.getText().toString(), editEdad.getText().toString(), editEmail.getText().toString(), editCurso.getText().toString());
+                        if(result)
+                        {
+                            Toast.makeText(getApplicationContext(), "Elemento modificado", Toast.LENGTH_SHORT).show();
+                        }
+                        else
+                        {
+                            Toast.makeText(getApplicationContext(), "No se ha podido modificar el elemento", Toast.LENGTH_SHORT).show();
+                            db.tanca();
+                            finish();
+                        }
                 }
             }
         });
