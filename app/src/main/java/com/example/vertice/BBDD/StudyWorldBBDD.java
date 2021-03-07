@@ -23,6 +23,7 @@ public class StudyWorldBBDD
     public static final String NOMBRE_ALUMNO = "nom";
     public static final String EDAD_ALUMNO = "edad";
     public static final String EMAIL_ALUMNO = "email";
+    public static final String CLAU_FOTO = "foto";
     public static final String CURSO_ALUMNO = "curso";
     public static final String BD_CREATE_ALUMNOS = "create table " + TABLA_ALUMNOS
             + " ( "
@@ -30,6 +31,7 @@ public class StudyWorldBBDD
             + NOMBRE_ALUMNO + " TEXT NOT NULL, "
             + EDAD_ALUMNO + " integer NOT NULL, "
             + EMAIL_ALUMNO + " TEXT , "
+            + CLAU_FOTO + " BLOB, "
             + CURSO_ALUMNO + " TEXT NOT NULL);";
 
     // ------------------------------------------------------------

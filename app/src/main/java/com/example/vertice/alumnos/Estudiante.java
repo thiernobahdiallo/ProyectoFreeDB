@@ -3,6 +3,17 @@ package com.example.vertice.alumnos;
 public class Estudiante
 {
     String id_alumno, nombre_alumno, edad, email, curso;
+    private byte[] foto;
+
+    public byte[] getFoto()
+    {
+        return foto;
+    }
+
+    public void setFoto(byte[] foto)
+    {
+        this.foto = foto;
+    }
 
     public String getId_alumno()
     {

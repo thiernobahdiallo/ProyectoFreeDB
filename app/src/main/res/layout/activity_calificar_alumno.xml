@@ -90,7 +90,7 @@
         android:layout_below="@id/editNota"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:background="@drawable/botonalumnoasignaturanotas"
+        android:background="@drawable/coloresbotonesnotas"
         android:text="Calificar"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
