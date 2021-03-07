@@ -13,6 +13,7 @@ import static com.example.vertice.BBDD.StudyWorldBBDD.BD_CREATE_ASIGNATURAS;
 import static com.example.vertice.BBDD.StudyWorldBBDD.BD_CREATE_CURSAR;
 import static com.example.vertice.BBDD.StudyWorldBBDD.TABLA_ALUMNOS;
 import static com.example.vertice.BBDD.StudyWorldBBDD.TABLA_ASIGNATURAS;
+import static com.example.vertice.BBDD.StudyWorldBBDD.TABLA_CURSAR;
 import static com.example.vertice.BBDD.StudyWorldBBDD.TAG;
 import static com.example.vertice.BBDD.StudyWorldBBDD.NOMBRE_BD;
 import static com.example.vertice.BBDD.StudyWorldBBDD.VERSIO;
@@ -29,10 +30,9 @@ public class AyudaDB extends SQLiteOpenHelper
     {
         try
         {
+            // Aqui creamos las tablas de alumnos, asignaturas y cursar.
             db.execSQL(BD_CREATE_ALUMNOS);
             db.execSQL(BD_CREATE_ASIGNATURAS);
-
-            // AQUI SE CREA LA TABLA CURSAR.
             db.execSQL(BD_CREATE_CURSAR);
         }
         catch(SQLException e)
@@ -47,6 +47,7 @@ public class AyudaDB extends SQLiteOpenHelper
         Log.w(TAG, "Actualizando base de datos de la versión: " + oldVersion + " a la versión: "+ newVersion);
         db.execSQL("DROP TABLE IF EXISTS " + TABLA_ALUMNOS);
         db.execSQL("DROP TABLE IF EXISTS " + TABLA_ASIGNATURAS);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLA_CURSAR);
         onCreate(db);
     }
 }

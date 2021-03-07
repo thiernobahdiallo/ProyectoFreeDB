@@ -27,7 +27,7 @@ public class StudyWorldBBDD
             + EMAIL_ALUMNO + " TEXT , "
             + CURSO_ALUMNO + " TEXT NOT NULL);";
 
-    // -------------------------------------------------------
+    // ------------------------------------------------------------
     // La segunda tabla de nuestra base de datos será asignaturas.
     public static final String TABLA_ASIGNATURAS = "asignaturas";
     public static final String ID_ASIGNATURA = "id_A";
@@ -39,7 +39,7 @@ public class StudyWorldBBDD
             + NOMBRE_ASIGNATURA + " TEXT NOT NULL, "
             + HORAS + " integer NOT NULL);";
 
-    // -------------------------------------------------------
+    // -------------------------------------------------------------
     // Como las dos tablas tienen una relación N - N hay que crear
     // una tabla intermedia que haga de relación entre dichas tablas.
     public static final String TABLA_CURSAR = "cursar";
@@ -49,9 +49,11 @@ public class StudyWorldBBDD
     public static final String BD_CREATE_CURSAR = "create table " + TABLA_CURSAR
             +" ( "
             + NOTA_ALUMNO + " integer NOT NULL, "
+            + ID_ALUMNO_CURSANDO + " integer NOT NULL, "
+            + ID_ASIGNATURA_CURSADA + " integer NOT NULL, "
             + "FOREIGN KEY ("+ ID_ALUMNO_CURSANDO +") REFERENCES " + TABLA_ALUMNOS +
             "(" + ID_ALUMNO + ")"
-            +  "FOREIGN KEY ("+ ID_ASIGNATURA_CURSADA +") REFERENCES " + TABLA_ASIGNATURAS +
+            +  ", FOREIGN KEY ("+ ID_ASIGNATURA_CURSADA +") REFERENCES " + TABLA_ASIGNATURAS +
             "(" + ID_ASIGNATURA + ")" +
             " PRIMARY KEY (" + ID_ASIGNATURA_CURSADA + ", " + ID_ALUMNO_CURSANDO + ")" +
             ")";
@@ -138,6 +140,8 @@ public class StudyWorldBBDD
         }
         return mCursor;
     }
+
+
     // -------------------------------------------------------
 
     // Métodos para LISTAR todos los registros de la tabla.
@@ -149,6 +153,11 @@ public class StudyWorldBBDD
     public Cursor obtenerTodasLasAsignaturas()
     {
         return db.query(TABLA_ASIGNATURAS, new String[]{ID_ASIGNATURA, NOMBRE_ASIGNATURA, HORAS}, null, null, null, null, null);
+    }
+
+    public Cursor obtenerNotas() throws SQLException
+    {
+        return db.rawQuery("SELECT " + NOMBRE_ALUMNO + ", " + NOMBRE_ASIGNATURA + ", " + NOTA_ALUMNO + " FROM " + TABLA_ALUMNOS + " INNER JOIN " + TABLA_CURSAR + " ON " + TABLA_CURSAR + "." + ID_ALUMNO_CURSANDO + " = " + TABLA_ALUMNOS + "." + ID_ALUMNO + " INNER JOIN " + TABLA_ASIGNATURAS + " ON " + TABLA_ASIGNATURAS + "." + ID_ASIGNATURA + " = " + TABLA_CURSAR + "." + ID_ASIGNATURA_CURSADA + ";",null);
     }
     // -------------------------------------------------------
 

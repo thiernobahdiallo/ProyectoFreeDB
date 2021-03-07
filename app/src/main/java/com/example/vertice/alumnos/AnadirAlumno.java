@@ -14,6 +14,7 @@ import com.example.vertice.R;
 
 public class AnadirAlumno extends AppCompatActivity
 {
+    // Creamos los botones y los campos de texto que usaremos para añadir alumnos
     private StudyWorldBBDD db;
     private EditText editName, editEdad, editEmail, editCurso;
     private Button addButton;
@@ -36,18 +37,28 @@ public class AnadirAlumno extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                db = new StudyWorldBBDD(getApplicationContext());
-                db.obre();
-                if(db.añadirAlumno(editName.getText().toString(), editEdad.getText().toString(), editEmail.getText().toString(), editCurso.getText().toString()) != -1)
+                // Aqui hacemos un control de errores para evitar que el usuario introduzca datos vacios en la bdd
+                // Decdimos que un alumno puede estar en la bdd sin tener el curso adjudicado.
+                if (editName.getText().toString().equals("") || editEdad.getText().toString().equals("") || editEmail.getText().toString().equals(""))
                 {
-                    Toast.makeText(getApplicationContext(), "Añadido correctamente", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "No puedes meter valores vacios en la base de datos", Toast.LENGTH_SHORT).show();
+                    finish();
                 }
-                else
-                {
-                    Toast.makeText(getApplicationContext(), "FALLO AL AÑADIR", Toast.LENGTH_SHORT).show();
+                // Si el usario mete datos con contendio seguimos con el programa y metemos los datos del alumno en la base de datos.
+                else {
+                    db = new StudyWorldBBDD(getApplicationContext());
+                    db.obre();
+                    if(db.añadirAlumno(editName.getText().toString(), editEdad.getText().toString(), editEmail.getText().toString(), editCurso.getText().toString()) != -1)
+                    {
+                        Toast.makeText(getApplicationContext(), "Añadido correctamente", Toast.LENGTH_SHORT).show();
+                    }
+                    else
+                    {
+                        Toast.makeText(getApplicationContext(), "FALLO AL AÑADIR", Toast.LENGTH_SHORT).show();
+                    }
+                    db.tanca();
+                    finish();
                 }
-                db.tanca();
-                finish();
             }
         });
     }

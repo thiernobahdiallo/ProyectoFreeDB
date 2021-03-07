@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F870AB"
     tools:context=".alumnos.SeleccionarAlumno">
 
     <EditText
@@ -20,24 +21,29 @@
 
     <Button
         android:id="@+id/selectAsignaturaButtoncito"
-        android:layout_toRightOf="@id/editAsignaturaID"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="30dp"
-        android:background="@drawable/coloresbotonesasignaturas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select" />
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/editAsignaturaID"
+        android:background="@drawable/coloresbotonesasignaturas"
+        android:text="Select"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/backAsignaturaButton"
-        android:background="@drawable/coloresbotonesasignaturas"
-        android:layout_below="@id/selectAsignaturaButtoncito"
-        android:layout_toRightOf="@id/editAsignaturaID"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="32dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Back" />
+        android:layout_below="@id/selectAsignaturaButtoncito"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/editAsignaturaID"
+        android:background="@drawable/coloresbotonesasignaturas"
+        android:text="Back"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tvSelectNombreAsignatura"
@@ -47,8 +53,10 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="120dp"
         android:fontFamily="monospace"
-        android:textSize="16dp"
-        android:text="Nombre Asignatura: " />
+        android:text="Nombre Asignatura: "
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tvSelectHorasAsignatura"
@@ -58,8 +66,10 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="60dp"
         android:fontFamily="monospace"
-        android:textSize="16dp"
-        android:text="Horas: " />
+        android:text="Horas: "
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tvSelectNombreAsignaturha"

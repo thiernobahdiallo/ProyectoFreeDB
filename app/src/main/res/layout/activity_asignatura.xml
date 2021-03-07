@@ -30,7 +30,7 @@
         android:background="@drawable/coloresbotonesasignaturas"
         android:fontFamily="monospace"
         android:text="Añadir Asignatura"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -45,7 +45,7 @@
         android:background="@drawable/coloresbotonesasignaturas"
         android:fontFamily="monospace"
         android:text="Seleccionar Asignatura"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -60,7 +60,7 @@
         android:background="@drawable/coloresbotonesasignaturas"
         android:fontFamily="monospace"
         android:text="Listar asignaturas"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -75,7 +75,7 @@
         android:background="@drawable/coloresbotonesasignaturas"
         android:fontFamily="monospace"
         android:text="Modificar asignatura"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -90,7 +90,7 @@
         android:background="@drawable/coloresbotonesasignaturas"
         android:fontFamily="monospace"
         android:text="Borrar asignatura"
-        android:textColor="#020101"
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:textStyle="bold" />
 

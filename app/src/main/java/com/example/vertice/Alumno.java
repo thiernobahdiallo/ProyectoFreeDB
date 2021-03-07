@@ -10,17 +10,20 @@ import android.widget.Button;
 import com.example.vertice.alumnos.CalificarAlumno;
 import com.example.vertice.alumnos.DeleteAlumno;
 import com.example.vertice.alumnos.ListarAlumnos;
+import com.example.vertice.alumnos.ListarNotas;
 import com.example.vertice.alumnos.ModificarAlumno;
 import com.example.vertice.alumnos.SeleccionarAlumno;
 import com.example.vertice.alumnos.AnadirAlumno;
 
 public class Alumno extends AppCompatActivity implements View.OnClickListener
 {
-    Button addAlumnoButton, selectAlumnoButton, listAlumnoButton, modificarAlumnoButton, deleteAlumnoButton, moveToAsignaturas, calificarAlumno;
+    // Aqui creamos los botones para cada actividad que necesitamos para gestionar los alumnos
+    Button addAlumnoButton, selectAlumnoButton, listAlumnoButton, modificarAlumnoButton, deleteAlumnoButton, moveToAsignaturas, calificarAlumno,mostrarCalificaciones;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
+        // Aqui asignamos cada botón a su respectivo botón del layout
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alumnos);
 
@@ -44,11 +47,15 @@ public class Alumno extends AppCompatActivity implements View.OnClickListener
 
         calificarAlumno = findViewById(R.id.calificarAlumnoButton);
         calificarAlumno.setOnClickListener(this);
+
+        mostrarCalificaciones = findViewById(R.id.mostrarCalificaciones);
+        mostrarCalificaciones.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v)
     {
+        // Aqui decidimos que actividad abrir por cada boton que se pulse
         if (v == addAlumnoButton)
         {
             startActivity(new Intent(v.getContext(), AnadirAlumno.class));
@@ -76,6 +83,10 @@ public class Alumno extends AppCompatActivity implements View.OnClickListener
         else if(v == calificarAlumno)
         {
             startActivity(new Intent(v.getContext(), CalificarAlumno.class));
+        }
+        else if(v == mostrarCalificaciones)
+        {
+            startActivity(new Intent(v.getContext(), ListarNotas.class));
         }
     }
 }

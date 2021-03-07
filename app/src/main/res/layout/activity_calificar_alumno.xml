@@ -20,9 +20,10 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="120dp"
         android:fontFamily="monospace"
-        android:textStyle="bold"
         android:text="ID Alumno:"
-        android:textSize="18sp" />
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editCalificarIdAlumno"
@@ -40,13 +41,14 @@
         android:id="@+id/tvCalificarIDAsignatura"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
         android:layout_below="@id/tvIDCalificarAlumno"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="70dp"
         android:fontFamily="monospace"
         android:text="ID Asignatura:"
-        android:textSize="18sp" />
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editCalificarIDAsignatura"
@@ -69,9 +71,10 @@
         android:layout_marginLeft="75dp"
         android:layout_marginTop="70dp"
         android:fontFamily="monospace"
-        android:textStyle="bold"
         android:text="Nota:"
-        android:textSize="18sp" />
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editNota"
@@ -94,6 +97,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:background="@drawable/botonalumnoasignatura"
-        android:text="Calificar" />
+        android:text="Calificar"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

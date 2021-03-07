@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#4D94FF"
     tools:context=".alumnos.DeleteAlumno">
 
     <EditText
@@ -21,23 +22,25 @@
     <Button
         android:id="@+id/deleteButtoncito"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/tvAlumnoABorrar"
-        android:layout_toRightOf="@id/editTextIDdelete"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="40dp"
+        android:layout_toRightOf="@id/editTextIDdelete"
         android:background="@drawable/colorbotonesalumnos"
-        android:layout_height="wrap_content"
-        android:text="Delete" />
+        android:text="Delete"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/tvAlumnoABorrar"
         android:layout_width="350dp"
-        android:gravity="center"
-        android:textSize="20dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:background="@drawable/colorbotonesalumnos"
-        android:textStyle="bold"
-        android:text="¿Cuál es el ID del alumno a borrar?" />
+        android:gravity="center"
+        android:text="¿Cuál es el ID del alumno a borrar?"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold" />
 </RelativeLayout>

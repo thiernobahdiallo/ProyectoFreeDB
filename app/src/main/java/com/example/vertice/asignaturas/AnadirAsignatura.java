@@ -14,6 +14,7 @@ import com.example.vertice.R;
 
 public class AnadirAsignatura extends AppCompatActivity
 {
+    // Creamos las variables que utilizaremos para añdir asignaturas
     private StudyWorldBBDD db;
     private EditText editNombreAsignatura, editHorasAsignatura;
     private Button addAsignaturaButton;
@@ -33,19 +34,26 @@ public class AnadirAsignatura extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                db = new StudyWorldBBDD(getApplicationContext());
-                db.obre();
-
-                if(db.añadirAsignaturas(editNombreAsignatura.getText().toString(), editHorasAsignatura.getText().toString()) != -1)
+                // Aqui hacemos un control de errores del usuario: El usuario puede meter asignaturas sin el campo horas.
+                if (editNombreAsignatura.getText().toString().equals(""))
                 {
-                    Toast.makeText(getApplicationContext(), "Asignatura añadida correctamente", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "No puedes meter valores vacios en la base de datos", Toast.LENGTH_SHORT).show();
+                    finish();
                 }
-                else
-                {
-                    Toast.makeText(getApplicationContext(), "Fallo al añadir asignatura", Toast.LENGTH_SHORT).show();
+                else {
+                    db = new StudyWorldBBDD(getApplicationContext());
+                    db.obre();
+                    if(db.añadirAsignaturas(editNombreAsignatura.getText().toString(), editHorasAsignatura.getText().toString()) != -1)
+                    {
+                        Toast.makeText(getApplicationContext(), "Asignatura añadida correctamente", Toast.LENGTH_SHORT).show();
+                    }
+                    else
+                    {
+                        Toast.makeText(getApplicationContext(), "Fallo al añadir asignatura", Toast.LENGTH_SHORT).show();
+                    }
+                    db.tanca();
+                    finish();
                 }
-                db.tanca();
-                finish();
             }
         });
     }

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#4D94FF"
     tools:context=".alumnos.ModificarAlumno">
 
 
@@ -15,7 +16,9 @@
         android:layout_marginTop="51dp"
         android:fontFamily="monospace"
         android:text="ID"
-        android:textSize="18sp" />
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editCalificarIdAlumno"
@@ -34,12 +37,14 @@
         android:id="@+id/tvRefreshNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/tvRefreshID"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="49dp"
         android:fontFamily="monospace"
         android:text="Nombre"
-        android:layout_below="@id/tvRefreshID"
-        android:layout_marginTop="49dp"
-        android:layout_marginLeft="20dp"
-        android:textSize="18sp" />
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editCalificarIDAsignatura"
@@ -59,12 +64,14 @@
         android:id="@+id/tvRefreshEdad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="monospace"
         android:layout_below="@+id/tvRefreshNombre"
-        android:layout_marginTop="52dp"
         android:layout_marginLeft="30dp"
+        android:layout_marginTop="52dp"
+        android:fontFamily="monospace"
         android:text="Edad"
-        android:textSize="18sp" />
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editNota"
@@ -84,12 +91,14 @@
         android:id="@+id/tvRefreshEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="monospace"
         android:layout_below="@id/tvRefreshEdad"
-        android:layout_marginTop="53dp"
         android:layout_marginLeft="25dp"
+        android:layout_marginTop="53dp"
+        android:fontFamily="monospace"
         android:text="Email"
-        android:textSize="18sp" />
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editRefreshEmailAlumno"
@@ -109,12 +118,14 @@
         android:id="@+id/tvRefreshCurso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="monospace"
         android:layout_below="@id/tvRefreshEmail"
-        android:layout_marginTop="50dp"
         android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="monospace"
         android:text="Curso"
-        android:textSize="18sp" />
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editRefreshCursoAlumno"
@@ -131,12 +142,14 @@
 
     <Button
         android:id="@+id/refreshButtoncito"
-        android:layout_below="@id/editRefreshCursoAlumno"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/colorbotonesalumnos"
-        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Refresh" />
+        android:layout_below="@id/editRefreshCursoAlumno"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/colorbotonesalumnos"
+        android:text="Refresh"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
 
 </RelativeLayout>

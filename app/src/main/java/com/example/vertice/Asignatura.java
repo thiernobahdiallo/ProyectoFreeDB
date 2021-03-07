@@ -16,11 +16,13 @@ import com.example.vertice.asignaturas.SeleccionarAsignatura;
 
 public class Asignatura extends AppCompatActivity implements View.OnClickListener
 {
+    // Aqui creamos los botones para cada actividad que necesitamos para gestionar las asignaturas
     Button addAsignaturaButton, selectAsignaturaButton, listAsignaturaButton, modificarAsignaturaButton, deleteAsignaturaButton, moveToAlumnos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
+        // Aqui asignamos cada botón a su respectivo botón del layout
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_asignatura);
 

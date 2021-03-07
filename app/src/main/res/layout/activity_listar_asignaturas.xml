@@ -4,33 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F870AB"
     tools:context=".alumnos.ListarAlumnos">
 
     <TextView
         android:id="@+id/tvAsignaturaID"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tvAsignaturaNombre"
         android:layout_width="wrap_content"
-        android:layout_below="@id/tvAsignaturaID"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:layout_below="@id/tvAsignaturaID"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tvAsignaturaHoras"
-        android:layout_below="@id/tvAsignaturaNombre"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="50dp"
-        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:layout_below="@id/tvAsignaturaNombre"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="50dp"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

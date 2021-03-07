@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#4D94FF"
     tools:context=".alumnos.SeleccionarAlumno">
 
     <EditText
@@ -20,23 +21,25 @@
 
     <Button
         android:id="@+id/selectAsignaturaButtoncito"
-        android:layout_toRightOf="@id/editAsignaturaID"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="50dp"
         android:layout_width="wrap_content"
-        android:background="@drawable/colorbotonesalumnos"
         android:layout_height="wrap_content"
-        android:text="Select" />
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/editAsignaturaID"
+        android:background="@drawable/colorbotonesalumnos"
+        android:text="Select"
+        android:textColor="#FFFFFF" />
 
     <Button
         android:id="@+id/backAsignaturaButton"
-        android:layout_below="@id/selectAsignaturaButtoncito"
-        android:background="@drawable/colorbotonesalumnos"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="225dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Back" />
+        android:layout_below="@id/selectAsignaturaButtoncito"
+        android:layout_marginLeft="225dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/colorbotonesalumnos"
+        android:text="Back"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/tvSelectNombreAsignatura"
@@ -44,10 +47,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/selectAsignaturaButtoncito"
         android:layout_marginLeft="30dp"
-        android:textStyle="bold"
         android:layout_marginTop="115dp"
         android:fontFamily="monospace"
-        android:text="Nombre Alumno:" />
+        android:text="Nombre Alumno:"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tvSelectHorasAsignatura"
@@ -55,10 +59,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tvSelectNombreAsignatura"
         android:layout_marginLeft="30dp"
-        android:textStyle="bold"
         android:layout_marginTop="60dp"
         android:fontFamily="monospace"
-        android:text="Edad:" />
+        android:text="Edad:"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tvEmailAlumno"
@@ -66,10 +71,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tvSelectHorasAsignatura"
         android:layout_marginLeft="30dp"
-        android:textStyle="bold"
         android:layout_marginTop="60dp"
         android:fontFamily="monospace"
-        android:text="Email: " />
+        android:text="Email: "
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tvCursoAlumno"
@@ -77,10 +83,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tvEmailAlumno"
         android:layout_marginLeft="30dp"
-        android:textStyle="bold"
         android:layout_marginTop="60dp"
         android:fontFamily="monospace"
-        android:text="Curso:" />
+        android:text="Curso:"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tvNombreAlumnho"
@@ -134,10 +141,12 @@
         android:id="@+id/tvIdAlumno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="40dp"
         android:fontFamily="monospace"
         android:text="ID:"
-        android:layout_marginLeft="10dp"
-        android:textSize="24sp" />
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>
