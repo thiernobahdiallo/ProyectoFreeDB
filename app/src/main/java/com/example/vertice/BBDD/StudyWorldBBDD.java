@@ -87,13 +87,14 @@ public class StudyWorldBBDD
     }
 
     // Métodos para AÑADIR un elemento a la base de datos.
-    public long añadirAlumno(String nombre, String edad, String email, String curso)
+    public long añadirAlumno(String nombre, String edad, String email, String curso,byte[] foto)
     {
         ContentValues initialValues = new ContentValues();
         initialValues.put(NOMBRE_ALUMNO, nombre);
         initialValues.put(EDAD_ALUMNO, edad);
         initialValues.put(EMAIL_ALUMNO, email);
         initialValues.put(CURSO_ALUMNO, curso);
+        initialValues.put(CLAU_FOTO,foto);
         return db.insert(TABLA_ALUMNOS, null, initialValues);
     }
 
