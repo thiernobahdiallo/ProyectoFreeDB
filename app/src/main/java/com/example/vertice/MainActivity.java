@@ -48,18 +48,16 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                logIn();
-
-//                // Los EditText NO están vacios
-//                if(usuario.getText().toString().equals(pref.getUser()) && password.getText().toString().equals(pref.getPassword()))
-//                {
-//                    Toast.makeText(getApplicationContext(), "Intent a la actividad", Toast.LENGTH_LONG).show();
-//                    logIn();
-//                }
-//                else
-//                {
-//                    Toast.makeText(getApplicationContext(), "El usuario no existe", Toast.LENGTH_LONG).show();
-//                }
+                // Los EditText NO están vacios
+                if(usuario.getText().toString().equals(pref.getUser()) && password.getText().toString().equals(pref.getPassword()))
+                {
+                    Toast.makeText(getApplicationContext(), "Intent a la actividad", Toast.LENGTH_LONG).show();
+                    logIn();
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(), "El usuario no existe", Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
